@@ -1,0 +1,7 @@
+# riuhsiya_rcrapsi
+I: If you plan to use the 'ssh-agent' it is recommended to run it as a service. Run 'pkg i termux-services' to install the ('runit') service manager You can enable the ssh-agent service using 'sv-enable ssh-agent' You can also enable sshd to autostart using 'sv-enable sshd'
+I: **ssh-agent** adalah program yang berjalan di latar belakang (background) dan bertugas untuk menyimpan kunci privat SSH Anda. Ini memungkinkan Anda untuk menggunakan kunci SSH tanpa harus mengetikkan passphrase setiap kali Anda melakukan koneksi SSH. **Dengan ssh-agent**, Anda hanya perlu memasukkan passphrase sekali, dan kunci akan disimpan di memori untuk digunakan dalam sesi tersebut.
+I: Menjalankan **ssh-agent** sebagai layanan memastikan bahwa program tersebut selalu berjalan di latar belakang setiap kali Anda memulai sistem atau sesi terminal. Ini membuatnya lebih mudah untuk mengelola kunci SSH tanpa harus memulai **ssh-agent** secara manual setiap kali.
+I: **runit** Ini adalah sistem manajemen layanan (service manager) yang digunakan untuk mengontrol layanan yang berjalan di sistem. Ini adalah alternatif untuk sistem seperti systemd atau init.
+I: **termux-services** Ini adalah paket di Termux (terminal emulator untuk Android) yang memungkinkan Anda untuk menjalankan layanan seperti **ssh-agent** dan **sshd** menggunakan **runit**.
+I: ```bash sv-enable ssh-agent ``` Perintah ini mengaktifkan layanan **ssh-agent** sehingga akan berjalan secara otomatis setiap kali Termux dimulai.
